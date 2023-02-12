@@ -2,6 +2,9 @@
 
 import os
 
+#Create an empty list
+my_list = []
+
 #Create an empty dictionary
 my_dict = {}
 
@@ -13,12 +16,12 @@ for file in file_list:
     file_path = os.path.join(my_dir, file)
     file_attr = os.stat(file_path)
 
-#Add items into dictionary and list the dictionary    
+    #Add items into dictionaries and print the dictionaries in a list   
     my_dict = {
         'path': file_path,
-        'file': file,
+        'file_name': file,
         'size': file_attr.st_size
     }
-    print(my_dict)
+    my_list.append(my_dict)
 
-
+print(*my_list, sep="\n")
