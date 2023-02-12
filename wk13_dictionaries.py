@@ -5,9 +5,6 @@ import os
 #Create an empty list
 my_list = []
 
-#Create an empty dictionary
-my_dict = {}
-
 #List items and their attributes in current working directory
 my_dir = os.getcwd()
 file_list = os.listdir(my_dir)
